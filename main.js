@@ -1,5 +1,11 @@
 function computerPlay(){
-        let value = Math.floor(Math.random()*3)+1;
-        return value == 1 ? "Rock" : value == 2 ? "Paper" : "Scissors";
+        let computerMove = Math.floor(Math.random()*3)+1;
+        return computerMove == 1 ? "Rock" : computerMove == 2 ? "Paper" : "Scissors";
 }
-console.log(computerPlay());
+
+function userPlay(){
+    let userMove = prompt("Choose rock,paper or scissors")
+    return userMove.toLowerCase();
+}
+
+console.log(userPlay());
