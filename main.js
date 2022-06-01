@@ -8,27 +8,39 @@ function userPlay(){
     return userMove[0].toUpperCase() + userMove.slice(1).toLowerCase();
 }
 function playGame(){
-    let resetGame = 0;
-    while (resetGame == 0){
+    let ComputerCounter = 0;
+    let playerCounter = 0;
+    let totalGames = 0;
+    while (totalGames<5){
         let computerMove = computerPlay();
         let userMove = userPlay();
         let gameWinner = `Player played ${userMove} and Computer played ${computerMove} and `;
         switch(true){
             case (computerMove == userMove):
-                gameWinner += "This is a Draw!";
+                console.log(gameWinner+="This is a draw!")
+                totalGames++;
                 break;
             case ((computerMove == "Rock" && userMove == "Paper") || 
             (computerMove == "Scissors" && userMove == "Rock") ||
             (computerMove == "Paper" && userMove == "Scissors")):
-                gameWinner += "Player wins!";
+                console.log(gameWinner+="Player wins!")
+                playerCounter++;
+                totalGames++;
+                break;
+                case ((userMove == "Rock" && computerMove == "Paper") || 
+                (userMove == "Scissors" && computerMove == "Rock") ||
+                (userMove == "Paper" && computerMove == "Scissors")):
+                console.log(gameWinner+="Computer wins!")
+                ComputerCounter++;
+                totalGames++;
                 break;
             default:
-                gameWinner += "Computer Wins!"
+                console.log("Try again with a valid option");
                 break;
         }
-        console.log(gameWinner);
-        resetGame = parseInt(prompt("If you want stop playing please press any number"));
+    }
+    return ComputerCounter> playerCounter ? "Computer wins the whole match!" : "Player wins the whole match!"
 
     }
-}
-playGame();
+
+console.log(playGame());
