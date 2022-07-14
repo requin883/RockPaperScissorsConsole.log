@@ -11,7 +11,6 @@ function playGame(){
     let ComputerCounter = 0;
     let playerCounter = 0;
     let totalGames = 0;
-    while (totalGames<5){
         let computerMove = computerPlay();
         let userMove = userPlay();
         let gameWinner = `Player played ${userMove} and Computer played ${computerMove} and `;
@@ -38,7 +37,6 @@ function playGame(){
                 console.log("Try again with a valid option");
                 break;
         }
-    }
     return ComputerCounter> playerCounter ? "Computer wins the whole match!" : "Player wins the whole match!"
 
     }
