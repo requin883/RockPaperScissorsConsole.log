@@ -1,0 +1,32 @@
+body{
+    color:#fb8500;
+    background:#023047;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+header{
+    text-align: center;
+}
+.btn-group{
+    margin:auto;
+    width: 40vw;
+    height: 30vh;
+    border-radius:10px;
+    background-color: #219ebc;
+    text-align: center;
+    margin-top: 10em;
+}
+button{
+    margin:2.5em 0.5em 0 0.5em;
+    background-color:#ffb703;
+    border-radius: 10px;
+    padding:1em;
+    border: 3px solid #ffb703;
+    color: #023047;
+}
+button:hover{
+    background-color:#fb8500;
+}
